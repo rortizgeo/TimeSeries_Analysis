@@ -23,14 +23,14 @@ El objetivo del análisis de este conjunto de datos es aplicar técnicas de seri
 
 La base de datos a utilizar es _Absenteeism at work_ es una base de acceso libre del UCI Machine Learning Repository cuyo dataset contiene información de julio de 2007 a julio de 2010 en una compañia en Brazil. Los datos contienen 740 registros en 19 variables. Esta base de datos posee características que la hacen idónea para la investigación al poseer cobertura conceptual (la información corresponde a la finalidad del estudio), cobertura geográfica (Brazil), cobertura temporal (2007-2010) y amplitud porque en esta fuente de tipo secundario se obtendrá la información de las variables geográficas, demográficas y de otras variables relacionadas con el ausentismo.
 
-Disponible en: https://archive.ics.uci.edu/dataset/445/absenteeism+at+work 
+Conjunto de datos disponible en: https://archive.ics.uci.edu/dataset/445/absenteeism+at+work 
 
 ## Referencias bibliográficas
 
 [1] Mowday RT, Porter LW, Steers RM (2013) Employee organization linkages: the psychology of commitment, absenteeism, and turnover. Academic press, New York
 
-[2] De Stobbeleir KE, De Clippeleer I, Caniëls MC, Goedertier F, Deprez J, De Vos A, Buyens D (2018) The inside effects of a strong external employer brand: how external perceptions can influ ence organizational absenteeism rates. Int J Hum Resour Manag 29:2106–2136
+[2] De Stobbeleir KE, De Clippeleer I, Caniëls MC, Goedertier F, Deprez J, De Vos A, Buyens D (2018) The inside effects of a strong external employer brand: how external perceptions can influ ence organizational absenteeism rates. Int J Hum Resour Manag 29:2106–2136.
 
-[3] Gonzalez BD, Grandner MA, Caminiti CB, Hui SA (2018) Cancer survivors in the workplace: sleep disturbance mediates the impact of cancer on healthcare expenditures and work absenteeism. Support Care Cancer 26:4049–4055
+[3] Gonzalez BD, Grandner MA, Caminiti CB, Hui SA (2018) Cancer survivors in the workplace: sleep disturbance mediates the impact of cancer on healthcare expenditures and work absenteeism. Support Care Cancer 26:4049–4055.
 
 [4] Kocakulah, M. C., Kelley, A. G., Mitchell, K. M., & Ruggieri, M. P. (2016). Absenteeism problems and costs: causes, effects and cures. The International Business & Economics Research Journal (Online), 15(3), 89.
