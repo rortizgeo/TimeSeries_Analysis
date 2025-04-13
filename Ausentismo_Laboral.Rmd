@@ -1,6 +1,6 @@
 ---
 title: "Ausentismo_Laboral"
-author: "Ricardo Ortiz & Jaime Martinez"
+author: "Ricardo Ortiz, Jaime Martinez & Jeisson Rodriguez"
 date: "2025-04-12"
 output: html_document
 ---
