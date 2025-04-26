@@ -35,5 +35,4 @@ Conjunto de datos disponible en: https://archive.ics.uci.edu/dataset/445/absente
 
 [4] Kocakulah, M. C., Kelley, A. G., Mitchell, K. M., & Ruggieri, M. P. (2016). Absenteeism problems and costs: causes, effects and cures. The International Business & Economics Research Journal (Online), 15(3), 89.
 
-[5] [1] D. Dua and C. Graff, "Absenteeism at work Data Set," UCI Machine Learning Repository, 2019. [Online]. Available: https://archive.ics.uci.edu/ml/datasets/Absenteeism+at+work
-
+[5] D. Dua and C. Graff, "Absenteeism at work Data Set," UCI Machine Learning Repository, 2019. [Online]. Available: https://archive.ics.uci.edu/ml/datasets/Absenteeism+at+work
