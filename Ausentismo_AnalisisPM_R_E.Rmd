@@ -3,8 +3,8 @@ title: "Ausentismo_RezagosEstacionalidad"
 author: "Ricardo Ortiz, Jeisson Rodriguez & Jaime Santa"
 date: "2025-04-26"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}

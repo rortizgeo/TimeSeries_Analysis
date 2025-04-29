@@ -85,6 +85,8 @@ ggplot(datos, aes(x = Absenteeism.time.in.hours)) +
 
 ```
 
+### Análisis de distribución de los datos
+
 Del gráfico se puede observar que hay una asimetría positiva y que algunos valores de ausencia podrían incluso considerarse atípicos. Por esta razón se considera realizar un diagrama de cajas _(boxplot)_: 
 
 ```{r, echo=FALSE}
@@ -96,6 +98,8 @@ ggplot(datos, aes(y = Absenteeism.time.in.hours)) +
 Acá vemos visualmente la asimetria y se identican con claridad algunos _outliers_, estando el 75% de los datos de ausencia por debajo de las 10 horas. Adicionalmente, se observa que hay una asimetría en la distribución según la posición de la media en la caja y en la separación de los "bigotes". 
 
 Tambien, a partir de los plots anteriores se decidió realizar la revisión de los registros donde la ausencia es cero ( *no-ausencia*), esto es cerca del 6% de los datos, que corresponden a 44 registros.
+
+### Presencia de datos faltantes
 
 ```{r, echo=FALSE}
 sum(datos$Absenteeism.time.in.hours == 0, na.rm = TRUE)
