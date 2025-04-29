@@ -45,6 +45,7 @@ sd(datos$Absenteeism.time.in.hours, na.rm = TRUE)  # Desviación estándar
 ```
 Acá vemos que el tiempo máximo de ausentismo es de 120 horas, con una mediana de 3 horas y un promedio de 7 horas aproximadamente. La desviación estándar arroja 13.3, esto indica que hay una variabilidad considerable en los datos, los datos están relativamente dispersos alrededor de la media.  
 
+### Distribución de la ausencia en horas
 Ahora vemos como se distribuyen los las hora de ausencia:
 
 ```{r, echo=FALSE}
