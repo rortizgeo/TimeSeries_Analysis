@@ -9,11 +9,12 @@ output: html_document
 knitr::opts_chunk$set(echo = FALSE)
 
 options(repos = c(CRAN = "https://cran.r-project.org"))
-#install.packages("zoo")
+#install.packages("tseries")
 library(dplyr)
 library(zoo)      # Para series temporales y promedio móvil
 library(ggplot2)  # Para gráficos
 library(lubridate)
+library(tseries)
 ```
 
 # AUSENTISMO LABORAL
@@ -43,7 +44,7 @@ A continuación se procede a cargar los datos de ausentismo laboral desde un arc
 datos <- read.csv("/Users/ricardoortiz/Desktop/Maestria_CD/Series_Tiempo/absenteeism+at+work/Absenteeism_at_work.csv", sep = ";")
 
 # Ver las primeras filas
-# head(datos)
+head(datos)
 ```
 
 Al revisar los datos se identifica que la variable de interés que puede ser apropiada para hacer el análisis es el tiempo de ausentismo en horas, disponible en la variable _Absenteeism.time.in.hours_. La cuál es la variable objetivo del dataset según la descripción del mismo.
@@ -113,9 +114,8 @@ Por otro lado, el dataset no incluye una fecha específica por lo que es necesar
 
 set.seed(123)
 
-# Filtrar las filas con Month.of.absence != NA y asegurar que dias_en_mes no sea NA
 datos <- datos %>%
-  filter(!is.na(Month.of.absence)) %>%  # Filtrar filas donde Month.of.absence no sea NA
+  filter(!is.na(Month.of.absence)) %>%
   mutate(
     mes_formateado = sprintf("%02d", Month.of.absence),
     primer_dia_mes = as.Date(paste(2007, mes_formateado, "01", sep = "-")),
@@ -123,15 +123,14 @@ datos <- datos %>%
   ) %>%
   rowwise() %>%
   mutate(
-    # Si dias_en_mes es NA, asignamos NA al día aleatorio y la fecha
-    dia_aleatorio = ifelse(is.na(dias_en_mes), NA, sample(1:dias_en_mes, 1)),
-    Fecha = ifelse(is.na(dia_aleatorio), NA, as.Date(paste(2007, mes_formateado, dia_aleatorio, sep = "-")))
+    dia_aleatorio = if (!is.na(dias_en_mes)) sample(1:dias_en_mes, 1) else NA_integer_,
+    Fecha = if (!is.na(dia_aleatorio)) as.Date(paste(2007, mes_formateado, dia_aleatorio, sep = "-")) else as.Date(NA)
   ) %>%
   ungroup() %>%
   arrange(Fecha)
 
 # Verificar
-# head(datos)
+head(datos)
 
 ```
 
@@ -275,7 +274,6 @@ datos %>%
 ```
 
 El análisis de la estacionalidad mostró que el ausentismo laboral no presenta variaciones cíclicas fuertes a lo largo del año. Aunque se observan ligeras variaciones en algunos meses, no se identificaron patrones claros que indiquen un comportamiento estacional robusto. Esto sugiere que el ausentismo registrado responde más a factores puntuales que a eventos recurrentes en el tiempo, lo cual limita la capacidad predictiva basada en componentes estacionales.
-
 
 
 ## Referencias bibliográficas
